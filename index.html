@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Aapki Rasoi - Premium Cloud Kitchen offering authentic Indian flavors delivered fresh to your door." />
+  <title>Aapki Rasoi - Premium Cloud Kitchen</title>
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="icon" type="image/png" href="favicon.png" />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <button class="theme-toggle" aria-label="Toggle dark mode">🌙</button>
+  <section class="hero">
+    <div class="hero__content">
+      <h1>Aapki Rasoi</h1>
+      <p>Savor Authentic Indian Flavors, Delivered Fresh!</p>
+    </div>
+  </section>
+
+  <main class="page page--menu active" id="menu-page">
+    <div class="search-filter">
+      <div class="search-bar">
+        <input type="text" id="search" placeholder="Search for dishes..." aria-label="Search menu items" />
+      </div>
+      <div class="filter-buttons" id="filter-buttons"></div>
+    </div>
+    <div class="menu-container" id="menu"></div>
+  </main>
+
+  <section class="page page--cart" id="cart-page">
+    <div class="cart-header">
+      <h2>Your Cart</h2>
+      <button class="back-btn" aria-label="Back to menu" data-page="menu-page">⬅️</button>
+    </div>
+    <div id="cart-list"></div>
+    <div id="bill-summary" class="bill-summary"></div>
+    <form id="order-form" class="order-form">
+      <div class="form-group">
+        <label for="name">Your Name</label>
+        <input type="text" id="name" placeholder="Your Name" required aria-required="true" />
+      </div>
+      <div class="form-group">
+        <label for="phone">Phone Number</label>
+        <input type="tel" id="phone" placeholder="Phone Number" required aria-required="true" pattern="[0-9]{10}" />
+      </div>
+      <div class="form-group">
+        <label for="address">Delivery Address</label>
+        <textarea id="address" placeholder="Delivery Address" rows="4" required aria-required="true"></textarea>
+      </div>
+      <button type="submit" class="send-order" aria-label="Place order via WhatsApp">Place Order via WhatsApp</button>
+    </form>
+  </section>
+
+  <button class="cart-toggle" aria-label="View cart">🛒</button>
+
+  <script type="module" src="app.js"></script>
+</body>
+</html>
